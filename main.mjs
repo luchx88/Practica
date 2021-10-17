@@ -7,7 +7,6 @@ function crearUsuario(nuevoEmail, nuevaPassword) {
     email: nuevoEmail,
     password: nuevaPassword,
   });
-  console.log(nuevo);
   listaUsuarios.push(nuevo);
 }
 
@@ -51,7 +50,6 @@ const luciano = new Student({
   },
 })
 
-console.log(luciano)
 
 const adolfo = new Student ({
   first: 'Adolfo',
@@ -68,14 +66,14 @@ const adolfo = new Student ({
   ],
 })
 
-const micaela = new Student ({
-  first: 'Micaela',
-  last: 'Bustamante',
-  email: 'mica.bustamante@gmail.com',
+const monica = new Student ({
+  first: 'Monica',
+  last: 'Lopez',
+  email: 'monicaslopez@gmail.com',
   password: 'hola567',
-  facebook: 'Mica Bustamante',
-  instagram: '@mica_',
-  twitter: '@mica_',
+  facebook: 'Monica Lopez',
+  instagram: '@monica_',
+  twitter: '@monica_',
   rutasAprendizaje: [
     escuelaData,
     escuelaVjs,
@@ -87,7 +85,7 @@ const micaela = new Student ({
 let listaUsuarios = []; 
 listaUsuarios.push(luciano);
 listaUsuarios.push(adolfo);
-listaUsuarios.push(micaela);
+listaUsuarios.push(monica);
 
 
 const listaEmail = listaUsuarios.map((elemento) => {
@@ -109,9 +107,7 @@ login.onclick = () => {
 
   const result = document.getElementById("result");
 
-  debugger
   if (emailValue == listaEmail[0] && password == listaPass[0]) {
-    console.log(luciano);
     result.innerHTML = `Hola <strong>${listaUsuarios[0]._name}</strong>, <br />
     has iniciado sesión <br />
     email: ${listaUsuarios[0].email} <br />
@@ -121,13 +117,15 @@ login.onclick = () => {
     email: ${listaUsuarios[1].email} <br />
     contraseña sarasa: \"${listaUsuarios[1].password}\"`;
   } else if (emailValue == listaEmail[2] && password == listaPass[2]){
-    result.innerHTML = `hola <strong>${listaUsuarios[2]._name}</strong>, <br />has iniciado sesión<br />
+    result.innerHTML = `❤❤❤ FELIZ DIA MAAAA!!!! ❤❤❤<br />hola <strong>${listaUsuarios[2]._name}</strong>, <br />has iniciado sesión<br />
     email: ${listaUsuarios[2].email}<br />
     contraseña sarasa: ${listaUsuarios[2].password}`
   } else {
-    alert('')
+    
+    result.innerHTML = `El email o la contraseña ingresada son incorrectos`;
+    result.setAttribute('style', 'color:red');
   }
-  result.setAttribute('style', 'margin: 0 0 80px 0;')
+  result.setAttribute('style', 'margin: 10px 0 80px 0;')
 }
 
 // --------- Boton Registrarse ---------
