@@ -1,4 +1,3 @@
-import {Student, LearningPaths} from './classes.mjs'
 
 // --------- Functions ---------
 

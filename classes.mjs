@@ -40,4 +40,3 @@ class LearningPaths {
   }
 }
 
-export {Student, LearningPaths}
