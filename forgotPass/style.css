@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  background-color: #121f3d;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+}
+.laughGif {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  /* background-image: url('./img/terry-crews-laugh.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px; */
+}
+.container div img {
+  width: 100%;
+}
